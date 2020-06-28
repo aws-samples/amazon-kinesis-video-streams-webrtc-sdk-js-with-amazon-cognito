@@ -41,25 +41,6 @@ module.exports = {
         new webpack.EnvironmentPlugin({
             PACKAGE_VERSION: version,
         }),
-
-        new LicenseWebpackPlugin({
-            outputFilename: 'kvs-webrtc.LICENSE',
-            addBanner: true,
-            renderBanner: () => fs.readFileSync('./license/bundleLicenseBanner.txt', { encoding: 'utf-8' }).replace('VERSION', version),
-            renderLicenses: modules => {
-                let text = fs.readFileSync('./license/bundleLicenseHeader.txt', { encoding: 'utf-8' });
-                modules.forEach(module => {
-                    text += '\n';
-                    text += `This product bundles ${module.name}, which is available under the ${module.licenseId} license:\n`;
-                    text += '\n';
-                    text += module.licenseText
-                        .split('\n')
-                        .map(line => `  ${line}\n`)
-                        .join('');
-                });
-                return text;
-            },
-        }),
     ],
 
     // Fail if there are any errors (such as a TypeScript type issue)
