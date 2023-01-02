@@ -45,10 +45,10 @@
         "license-webpack-plugin": "^2.1.2",
         "prettier": "^1.18.2",
         "ts-jest": "^25.4.0",
-        "ts-loader": "^6.0.4",
+        "ts-loader": "^9.4.2",
         "typescript": "^3.6.2",
-        "webpack": "^4.39.3",
-        "webpack-cli": "^3.3.11",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^3.11.2",
         "webpack-merge": "^4.2.2"
     },
